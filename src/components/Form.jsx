@@ -8,9 +8,6 @@ export const Form = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         const party = e.target.party.value;
-        // dispatch(addVote(party));
-        // partySlice.actions.addVote(party);
-        // partySliceActions.addVote(party);
         dispatch(partySliceActions.addVote(party));
         navigate('/result');
         e.target.reset();
@@ -78,6 +75,5 @@ export const Form = () => {
             </form>
         </div>
         </>
-
     )
 }
