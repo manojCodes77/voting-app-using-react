@@ -1,6 +1,6 @@
 const PoliticalPartyCard = ({ party }) => {
   return (
-    <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white dark:bg-gray-800  ">
+    <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white dark:bg-gray-800  justify-self-center ">
       <div className="flex flex-row justify-center py-2" ><img className=" h-48 " src={party.image} alt={party.name} /></div>
       <div className="px-6 py-4">
         <div className="font-bold text-xl mb-2 text-gray-900 dark:text-white">{party.name}</div>
