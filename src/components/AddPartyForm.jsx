@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import { useDispatch } from 'react-redux';
-import { addParty } from '../redux/partySlice';
+import { partySliceActions } from '../redux/partySlice';
 import { useNavigate } from 'react-router';
 
 const AddPartyForm = () => {
@@ -24,7 +24,7 @@ const AddPartyForm = () => {
             image: imageRef.current.value,
             votes: 0
         };
-        dispatch(addParty(newParty));
+        dispatch(partySliceActions.addParty(newParty));
         navigate('/parties');
         e.target.reset();
     };

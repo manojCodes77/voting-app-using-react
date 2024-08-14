@@ -1,16 +1,17 @@
-import { addVote, selectParties } from "../redux/partySlice";
+import {  partySliceActions, selectParties } from "../redux/partySlice";
 import { useNavigate } from "react-router";
 import { useDispatch, useSelector } from "react-redux";
 export const Form = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
-    // const partyNames = selectParties.map(party => party.name);
     const partyNames = useSelector(selectParties).map(party => party.name);
     const handleSubmit = (e) => {
         e.preventDefault();
         const party = e.target.party.value;
-        dispatch(addVote(party));
-        console.log(party);
+        // dispatch(addVote(party));
+        // partySlice.actions.addVote(party);
+        // partySliceActions.addVote(party);
+        dispatch(partySliceActions.addVote(party));
         navigate('/result');
         e.target.reset();
     };

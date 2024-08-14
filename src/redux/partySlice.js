@@ -18,7 +18,7 @@ const partySlice = createSlice({
         },
     },
 });
-export const { addParty,addVote } = partySlice.actions;
+export const partySliceActions=partySlice.actions;
 export const selectParties = (state) => state.party.parties;
 
 export default partySlice.reducer;
